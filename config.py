@@ -152,7 +152,7 @@ available_setting = {
     # chatgpt指令自定义触发词
     "clear_memory_commands": ["#清除记忆"],  # 重置会话指令，必须以#开头
     # channel配置
-    "channel_type": "",  # 通道类型，支持：{wx,wxy,terminal,wechatmp,wechatmp_service,wechatcom_app,dingtalk}
+    "channel_type": "",  # 通道类型，支持：{ntchat,wx,wxy,terminal,wechatmp,wechatmp_service,wechatcom_app,dingtalk}
     "subscribe_msg": "",  # 订阅消息, 支持: wechatmp, wechatmp_service, wechatcom_app
     "debug": False,  # 是否开启debug模式，开启后会打印更多日志
     "appdata_dir": "",  # 数据目录
@@ -175,6 +175,9 @@ available_setting = {
     "Minimax_api_key": "",
     "Minimax_group_id": "",
     "Minimax_base_url": "",
+
+    #ntchat 设置
+    "ntchat_smart": True,  # 配置ntchat是否使用已登录微信，False为多开
 }
 
 

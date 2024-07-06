@@ -10,13 +10,23 @@ class ContextType(Enum):
     FILE = 4  # 文件信息
     VIDEO = 5  # 视频信息
     SHARING = 6  # 分享信息
-
+    EMOJI=7  #表情图片
+    QUOTE=8   #引用消息
+    CARD = 9 #微信名片
     IMAGE_CREATE = 10  # 创建图片命令
+    MINIAPP = 11 # 小程序
+    SYSTEM =12 # 系统消息
+    WCPAY = 13 # 微信转账
+    XML = 14 # xml卡片(聊天记录,QQ音乐,未知小程序，动画表情，收藏，直播，未知）
+    WECHAT_VIDEO = 15 #视频号
+    MP = 16 #微信公众号文字消息
     ACCEPT_FRIEND = 19 # 同意好友请求
     JOIN_GROUP = 20  # 加入群聊
     PATPAT = 21  # 拍了拍
     FUNCTION = 22  # 函数调用
     EXIT_GROUP = 23 #退出
+
+    MP_LINK =18  # 公众号推文
 
 
     def __str__(self):

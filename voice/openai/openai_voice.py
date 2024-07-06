@@ -13,6 +13,8 @@ import requests
 from common import const
 import datetime, random
 
+import os
+
 class OpenaiVoice(Voice):
     def __init__(self):
         openai.api_key = conf().get("open_ai_api_key")
@@ -58,7 +60,17 @@ class OpenaiVoice(Voice):
                 'voice': conf().get("tts_voice_id") or "alloy"
             }
             response = requests.post(url, headers=headers, json=data)
-            file_name = "tmp/" + datetime.datetime.now().strftime('%Y%m%d%H%M%S') + str(random.randint(0, 1000)) + ".mp3"
+
+            # 获取当前文件的绝对路径 windows 系统设置
+            current_directory = os.path.abspath(os.path.dirname(__file__))
+            # 获取当前文件夹上一级目录的路径
+            parent_directory = os.path.dirname(current_directory)
+            # 获取上两个目录的路径
+            grandparent_directory = os.path.dirname(parent_directory)
+            # 创建文件名
+            file_name = os.path.join(grandparent_directory, "tmp", datetime.datetime.now().strftime('%Y%m%d%H%M%S') + str(random.randint(0, 1000)) + ".mp3")
+            
+            #file_name = "tmp/" + datetime.datetime.now().strftime('%Y%m%d%H%M%S') + str(random.randint(0, 1000)) + ".mp3"
             logger.debug(f"[OPENAI] text_to_Voice file_name={file_name}, input={text}")
             with open(file_name, 'wb') as f:
                 f.write(response.content)

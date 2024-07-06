@@ -11,12 +11,16 @@ class ReplyType(Enum):
     VIDEO_URL = 5  # 视频URL
     FILE = 6  # 文件
     CARD = 7  # 微信名片，仅支持ntchat
-    INVITE_ROOM = 8  # 邀请好友进群
+    InviteRoom = 8  # 邀请好友进群
     INFO = 9
     ERROR = 10
     TEXT_ = 11  # 强制文本
     VIDEO = 12
     MINIAPP = 13  # 小程序
+    LINK = 14  #链接
+    CALL_UP = 15  #打电话
+    GIF = 16  #动图
+    XML = 17 #卡片
 
     def __str__(self):
         return self.name
