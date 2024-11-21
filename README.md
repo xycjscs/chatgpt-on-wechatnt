@@ -1,5 +1,7 @@
 # 简介
 
+This is made to combine the latest chatgpt-on-wechat and the ntchat interface. Ntchat was introduced by [chatgpt-on-wechatwin](https://github.com/Tishon1532/chatgpt-on-wechat-win). However it does not follow latest chatgpt-on-wechat, to support aibot on wechat stablely, this reporsitory was made. Cretdis also go to chatgpt-on-wechatwin, ntchat, and chatgpt-on-wechat.
+
 > chatgpt-on-wechat（简称CoW）项目是基于大模型的智能对话机器人，支持微信公众号、企业微信应用、飞书、钉钉接入，可选择GPT3.5/GPT4.0/Claude/Gemini/LinkAI/ChatGLM/KIMI/文心一言/讯飞星火/通义千问/LinkAI，能处理文本、语音和图片，通过插件访问操作系统和互联网等外部资源，支持基于自有知识库定制企业AI应用。
 
 最新版本支持的功能如下：
